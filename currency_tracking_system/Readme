@@ -1,49 +1,72 @@
 # 💱 Currency Tracking System
 
-This repository contains a **Java-based project** that I developed during my internship to learn and practice **data fetching, database handling, and reporting**.  
-
-The project demonstrates how to retrieve **daily currency rates from TCMB (Central Bank of the Republic of Turkey)**, process the data, store it in a **MySQL database**, and generate reports to compare exchange rates.
+![Java](https://img.shields.io/badge/Language-Java-blue?style=flat&logo=java)
+![MySQL](https://img.shields.io/badge/Database-MySQL-green?style=flat&logo=mysql)
+![JDBC](https://img.shields.io/badge/Connectivity-JDBC-orange?style=flat)
 
 ---
 
-## 🏢 Project Overview
+## 🔹 Project Overview
 
-During my internship as a **Software Developer**, I applied theoretical knowledge in practical tasks:
+This project is a **Java application** that fetches **daily exchange rates** from the **Central Bank of the Republic of Turkey (TCMB)**, lists them to the user, stores the selected currency in a **MySQL database**, and generates a **report comparing today’s and yesterday’s rates**.  
 
-- Fetching **XML data** from an external API (TCMB)  
-- Parsing XML using **DOM Parser** to extract currency rates  
-- Listing all available currencies to the user and allowing selection  
-- Storing selected currency values in **MySQL** using **JDBC**  
-- Calculating differences between today’s and previous day’s rates  
-- Generating a simple **console-based report**  
+It was developed as a **learning-focused project** during my internship to practice **data fetching, processing, and reporting**.
+
+---
+
+## 🚀 Features
+
+- 🌐 Fetch XML-based currency rates from TCMB  
+- 📋 List all available currencies and allow user selection  
+- 💾 Store selected currency data in MySQL  
+- 📊 Calculate and display the difference between today’s and yesterday’s rates  
+- 🖥️ Console-based reporting for quick analysis  
 
 ---
 
 ## 💡 Key Learning Points
 
-Through this project, I learned and practiced:
-
-- **Java programming**: OOP, exception handling, collections, I/O  
-- **Database integration**: Using MySQL and JDBC to store and retrieve data  
-- **Data processing**: Parsing XML and handling numeric conversion  
-- **User interaction**: Console input for selecting currencies  
-- **Reporting logic**: Comparing daily currency rates programmatically  
+- **Java Programming:** OOP, exception handling, collections, I/O operations  
+- **Database Integration:** Using MySQL and JDBC for storing and retrieving data  
+- **Data Processing:** Parsing XML with DOM Parser, converting string to numeric values  
+- **User Interaction:** Console input for selecting currencies  
+- **Reporting Logic:** Comparing daily currency rates programmatically  
 
 ---
 
-## ⚡ Technologies Used
+## 🛠 Technologies Used
 
-- Java 17+  
-- MySQL 8+  
-- JDBC  
-- XML Parsing (DOM Parser)  
-- IntelliJ IDEA (IDE)  
+| Technology | Purpose |
+|------------|---------|
+| Java 17+ | Core programming |
+| MySQL 8+ | Database storage |
+| JDBC | Java-MySQL connectivity |
+| DOM Parser | XML parsing |
+| IntelliJ IDEA | Development IDE |
+
+---
+
+## ⚠️ Notes
+
+- Some currency values in the XML may be empty, which could cause parsing errors  
+- Running the program multiple times in the same day may create **duplicate records**  
+- Future improvements: saving console reports to **Excel, CSV, or PDF**, or adding a **GUI/web interface**
+
+---
+
+## 📈 Future Improvements
+
+- Automatically store all currencies in the database  
+- Generate detailed report files (Excel, PDF, CSV)  
+- Add GUI for better user experience  
 
 ---
 
 ## 📌 Summary
 
-This project represents a **practical application of skills learned during my internship**.  
-It allows fetching, storing, and analyzing currency data, helping me understand real-world **data processing, database operations, and reporting**.  
+This project **demonstrates practical application** of Java, database handling, and data processing skills learned during my internship.  
+It shows how **real-world data fetching, storing, and reporting** can be implemented in a simple and effective console-based application.
 
-It is a **learning-focused project** that showcases my progress and abilities in software development.
+---
+
+![Currency Tracking System](https://img.shields.io/badge/Status-Completed-brightgreen)
