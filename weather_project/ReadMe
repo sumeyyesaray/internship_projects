@@ -16,6 +16,7 @@ Bu proje, **Java** kullanarak hava durumu verilerini **API ve Web Scraping** yö
 ---
 
 ## 📂 Proje Yapısı
+
 weather-scraper/
 ├── src/wheater/
 │ ├── WebScraperAndSaver.java # API'den veri çekip MySQL'e kaydeder
@@ -40,7 +41,19 @@ weather-scraper/
 | **3️⃣ Java tarafını çalıştır** | ```bash<br>javac -cp ".;lib/*" wheater/*.java<br>java -cp ".;lib/*" wheater.WebScraperAndSaver<br>``` |
 | **4️⃣ Python scriptini çalıştır (grafik için)** | ```bash<br>python report.py<br>``` |
 
+---
 
+## 📊 Örnek Çıktı  
+
+<p align="center">
+  <img src="Çıktı.png" width="600"/>
+</p>
+
+<p align="center">
+  <img src="grafik.png" width="600"/>
+</p>
+
+---
 
 ## 🛠 Kullanılan Teknolojiler
 
@@ -60,29 +73,3 @@ weather-scraper/
 
 ```java
 scheduler.scheduleAtFixedRate(task, 0, 24, TimeUnit.HOURS);
-
-## 📊 Örnek Çıktı  
-
-<p align="center">
-  <img src="Çıktı.png" width="600"/>
-</p>
-
-<p align="center">
-  <img src="grafik.png" width="600"/>
-</p>
-
-
-## 🛠 Kullanılan Teknolojiler
-
-| Teknoloji | Açıklama |
-|-----------|----------|
-| ☕ **Java 17** | API’den veri çekme ve veritabanına kaydetme işlemleri |
-| 🌐 **Jsoup** | HTML parsing ile web scraping |
-| 🗄️ **MySQL** | Hava durumu verilerinin saklandığı veritabanı |
-| 🐍 **Python (Pandas, Matplotlib)** | Verilerin analiz edilmesi ve grafikle görselleştirilmesi |
-| ⏳ **ScheduledExecutorService** | Günlük otomatik veri toplama |
-
-## ⏳ Otomatik Çalıştırma
-
-`DailyScheduler` sınıfı sayesinde program her gün saatlik verileri alır ve MySQL’e kaydeder:  
-
