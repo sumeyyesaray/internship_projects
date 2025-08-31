@@ -42,6 +42,7 @@ CREATE TABLE weather_data (
  description VARCHAR(50),
  time DATETIME
 );
+```
 
 ### 2️⃣ Config.properties ayarla
 
@@ -50,7 +51,7 @@ db.url=jdbc:mysql://localhost:3306/weatherdb?useSSL=false&allowPublicKeyRetrieva
 db.user=root
 db.pass=YOUR_PASSWORD
 cities=ankara, istanbul
-
+```
 
 
 ### 3️⃣ Java tarafını çalıştır
