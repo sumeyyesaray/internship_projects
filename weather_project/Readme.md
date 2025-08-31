@@ -1,31 +1,29 @@
 # 🌦️ Weather Data Scraper & Visualizer
 
-Bu proje, **Java** kullanarak hava durumu verilerini **API ve Web Scraping** yöntemleriyle toplar, **MySQL veritabanına** kaydeder ve ardından **Python** ile görselleştirir.
+This project uses **Java** to collect weather data from an **API** and through **Web Scraping**, saves it to a **MySQL** database, and then visualizes it with **Python.**
+
+## 🚀 Features
+
+| Feature | Description |
+|---------|-------------|
+| 📡 Open-Meteo API & Jsoup | Collects weather data from the API and through web scraping. |
+| 🗄️ MySQL | Saves data to the database and prevents duplicate entries. |
+| 🕒 DailyScheduler | Automatically runs the application every day. |
+| 📊 Python (Matplotlib + Pandas) | Analyzes the data and visualizes it with charts. |
+
+## 📂 Project Structure
 
 
-## 🚀 Özellikler
-
-| Özellik | Açıklama |
-|---------|----------|
-| 📡 Open-Meteo API & Jsoup | Hava durumu verilerinin API’den ve web scraping yöntemiyle çekilmesi. |
-| 🗄️ MySQL | Verilerin veritabanına kaydedilmesi ve tekrar eden kayıtların engellenmesi. |
-| 🕒 DailyScheduler | Uygulamanın her gün otomatik çalıştırılması. |
-| 📊 Python (Matplotlib + Pandas) | Verilerin analiz edilmesi ve grafikle görselleştirilmesi. |
-
-
-
-## 📂 Proje Yapısı
 
 weather-scraper/
 ├── src/wheater/
-│   ├── WebScraperAndSaver.java    # API'den veri çekip MySQL'e kaydeder
-│   ├── WebScraper.java            # Jsoup ile scraping
-│   ├── Config.java                # config.properties okuma
-│   ├── DailyScheduler.java        # Günlük çalıştırıcı
-│   └── WeatherData.java           # Model sınıfı
-├── config.properties              # DB ve şehir ayarları
-└── report.py                       # Python görselleştirme scripti
-
+│ ├── WebScraperAndSaver.java # Fetches data from the API and saves it to MySQL
+│ ├── WebScraper.java # Scraping with Jsoup
+│ ├── Config.java # Reads config.properties
+│ ├── DailyScheduler.java # Daily runner
+│ └── WeatherData.java # Model class
+├── config.properties # DB and city settings
+└── report.py # Python visualization script
 
 
 ## ⚙️ Kurulum
@@ -65,7 +63,7 @@ java -cp ".;lib/*" wheater.WebScraperAndSaver
 python report.py
 
 
-## 5️⃣ Örnek Çıktı ve Grafik
+## 📊 Sample Output and Graph
 
 <p align="center">
 <img src="Çıktı.png" alt="Örnek Çıktı" width="600"/>
@@ -75,20 +73,19 @@ python report.py
 <img src="grafik.png" alt="Örnek Grafik" width="600"/>
 </p>
 
-## 🛠 Kullanılan Teknolojiler
+## 🛠 Technologies Used
 
-| Teknoloji | Açıklama |
-|-----------|----------|
-| ☕ Java 17 | API’den veri çekme ve veritabanına kaydetme işlemleri. |
-| 🌐 Jsoup | HTML parsing ile web scraping. |
-| 🗄️ MySQL | Hava durumu verilerinin saklandığı veritabanı. |
-| 🐍 Python | Verilerin analiz edilmesi ve grafikle görselleştirilmesi. |
-| ⏳ ScheduledExecutorService | Günlük otomatik veri toplama. |
+| Technology | Description |
+|------------|-------------|
+| ☕ Java 17 | Fetches data from the API and saves it to the database. |
+| 🌐 Jsoup | HTML parsing for web scraping. |
+| 🗄️ MySQL | Database for storing weather data. |
+| 🐍 Python | Analyzes data and visualizes it with charts. |
+| ⏳ ScheduledExecutorService | Automatically collects data daily. |
 
-## ⏳ Otomatik Çalıştırma
+## ⏳ Automatic Execution
 
-DailyScheduler sınıfı sayesinde program her gün saatlik verileri alır ve MySQL’e kaydeder:
+The DailyScheduler class ensures that the program collects hourly data every day and saves it to MySQL:
 
-Java
-
+```java
 scheduler.scheduleAtFixedRate(task, 0, 24, TimeUnit.HOURS);
