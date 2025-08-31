@@ -44,22 +44,28 @@ CREATE TABLE weather_data (
 );
 
 ### 2️⃣ Config.properties ayarla
+
+```properties
 db.url=jdbc:mysql://localhost:3306/weatherdb?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
 db.user=root
 db.pass=YOUR_PASSWORD
 cities=ankara, istanbul
 
 
+
 ### 3️⃣ Java tarafını çalıştır
+
 javac -cp ".;lib/" wheater/*.java
 java -cp ".;lib/*" wheater.WebScraperAndSaver
 
 
 ### 4️⃣ Python scriptini çalıştır
+
 python report.py
 
 
 ## 5️⃣ Örnek Çıktı ve Grafik
+
 <p align="center">
 <img src="Çıktı.png" alt="Örnek Çıktı" width="600"/>
 </p>
@@ -79,6 +85,7 @@ python report.py
 | ⏳ ScheduledExecutorService | Günlük otomatik veri toplama. |
 
 ## ⏳ Otomatik Çalıştırma
+
 DailyScheduler sınıfı sayesinde program her gün saatlik verileri alır ve MySQL’e kaydeder:
 
 Java
