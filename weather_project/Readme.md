@@ -28,7 +28,7 @@ weather-scraper/
 
 ## ⚙️ Kurulum
 
-### 1️⃣ Veritabanını oluştur
+### 1️⃣ Create the Database
 ```sql
 CREATE DATABASE weatherdb;
 USE weatherdb;
@@ -42,7 +42,7 @@ CREATE TABLE weather_data (
 );
 ```
 
-### 2️⃣ Config.properties ayarla
+### 2️⃣ Configure config.properties
 
 ```properties
 db.url=jdbc:mysql://localhost:3306/weatherdb?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
@@ -52,13 +52,13 @@ cities=ankara, istanbul
 ```
 
 
-### 3️⃣ Java tarafını çalıştır
+### 3️⃣ Run the Java Application
 
 javac -cp ".;lib/" wheater/*.java
 java -cp ".;lib/*" wheater.WebScraperAndSaver
 
 
-### 4️⃣ Python scriptini çalıştır
+### 4️⃣ Run the Python Script
 
 python report.py
 
@@ -66,11 +66,11 @@ python report.py
 ## 📊 Sample Output and Graph
 
 <p align="center">
-<img src="Çıktı.png" alt="Örnek Çıktı" width="600"/>
+<img src="Çıktı.png" alt="Sample Output" width="600"/>
 </p>
 
 <p align="center">
-<img src="grafik.png" alt="Örnek Grafik" width="600"/>
+<img src="grafik.png" alt="Sample Chart" width="600"/>
 </p>
 
 ## 🛠 Technologies Used
