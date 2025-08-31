@@ -40,19 +40,7 @@ weather-scraper/
 | **3️⃣ Java tarafını çalıştır** | ```bash<br>javac -cp ".;lib/*" wheater/*.java<br>java -cp ".;lib/*" wheater.WebScraperAndSaver<br>``` |
 | **4️⃣ Python scriptini çalıştır (grafik için)** | ```bash<br>python report.py<br>``` |
 
----
 
-## 📊 Örnek Çıktı  
-
-✔ Ankara için veriler kaydedildikten sonra grafik:  
-
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/0000000/weather-graph.png" width="600"/>
-</p>
-
-*(Kendi grafiğinin ekran görüntüsünü buraya ekleyebilirsin 👆)*
-
----
 
 ## 🛠 Kullanılan Teknolojiler
 
